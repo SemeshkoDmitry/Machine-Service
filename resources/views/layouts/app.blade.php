@@ -16,7 +16,21 @@
         <div>
             <a class="text-white me-3" href="/">Головна</a>
             <a class="text-white me-3" href="/machines">Обладнання</a>
-            <a class="text-white" href="/about">Про компанію</a>
+            <a class="text-white me-3" href="/about">Про компанію</a>
+
+            @auth
+                <span class="text-white me-3">{{ Auth::user()->name }}</span>
+
+                <form action="{{ route('logout') }}" method="POST" style="display:inline-block;">
+                    @csrf
+                    <button type="submit" class="btn btn-sm btn-outline-light">Вихід</button>
+                </form>
+            @endauth
+
+            @guest
+                <a class="btn btn-sm btn-outline-light me-2" href="{{ route('login') }}">Вхід</a>
+                <a class="btn btn-sm btn-light" href="{{ route('register') }}">Реєстрація</a>
+            @endguest
         </div>
     </div>
 </nav>
