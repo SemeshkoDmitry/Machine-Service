@@ -13,6 +13,6 @@ Route::get('/machines/{id}', [MachineController::class, 'show']);
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('machines', AdminMachineController::class)->only([
-        'index', 'show', 'destroy'
+        'index', 'create', 'store', 'show', 'destroy'
     ]);
 });

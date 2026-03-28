@@ -12,6 +12,10 @@
             {{ session('success') }}
         </div>
     @endif
+    
+    <a href="{{ route('admin.machines.create') }}" class="btn btn-success mb-3">
+        Додати новий елемент
+    </a>
 
     <table class="table table-bordered">
         <thead>
