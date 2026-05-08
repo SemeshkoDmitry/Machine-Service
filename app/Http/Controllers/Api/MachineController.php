@@ -82,4 +82,14 @@ class MachineController extends Controller
             'message' => 'Елемент успішно видалено'
         ]);
     }
+
+    public function categories()
+{
+    $categories = Machine::select('category')
+        ->distinct()
+        ->pluck('category');
+
+    return response()->json($categories);
+}
+
 }

@@ -9,3 +9,5 @@ Route::post('/machines/store', [MachineController::class, 'store']);
 
 Route::put('/machines/{id}', [MachineController::class, 'update']);
 Route::delete('/machines/{id}', [MachineController::class, 'destroy']);
+
+Route::get('/categories', [MachineController::class, 'categories']);

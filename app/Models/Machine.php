@@ -7,8 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Machine extends Model
 {
     protected $fillable = [
-        'name',
-        'service',
-        'description',
-    ];
+    'name',
+    'service',
+    'price',
+    'description',
+    'image',
+    'category'
+];
 }
